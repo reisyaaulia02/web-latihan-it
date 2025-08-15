@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+        <nav>
+            <a href="feed.html">Kembali ke Feed</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Foto Profil -->
+        <img src="https://i.pinimg.com/736x/2b/cd/fb/2bcdfb2e5b922e5d87f3a66bfb26e123.jpg" 
+             alt="Foto Profil" class="foto-profil">
+
+        <!-- Biodata -->
+        <h2>Reisya Aulia 💖</h2>
+        <p><strong>Hobi:</strong> Tidur, makan, bercanda 🤭</p>
+        <p><strong>Motto:</strong> "Hidup santai, tapi tetap kece."</p>
+
+        <!-- Progress Bar Lucu -->
+        <div class="progress-container">
+            <p>Level Kepo Temen 😏</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;">75%</div>
+            </div>
+        </div>
+
+        <!-- Tombol Ganti Warna -->
+        <button onclick="gantiWarna()">🎨 Ganti Warna Background</button>
+    </main>
+
+    <script>
+        function gantiWarna() {
+            const warna = ["#fef6f9", "#d4f1f4", "#fff4e6", "#f0e6ff"];
+            document.body.style.backgroundColor = 
+                warna[Math.floor(Math.random() * warna.length)];
+        }
+    </script>
+</body>
+</html>

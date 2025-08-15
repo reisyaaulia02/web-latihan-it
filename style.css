@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fef6f9;
+    margin: 0;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4757;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ff6b81;
+    font-weight: bold;
+}
+
+header {
+    background-color: #ffe0e6;
+    padding: 15px;
+    border-radius: 0 0 15px 15px;
+}
+.foto-profil {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 3px solid #ff6b81;
+}
+
+.progress-container {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #ff6b81;
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+}
