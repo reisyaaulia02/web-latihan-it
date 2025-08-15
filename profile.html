@@ -15,10 +15,7 @@
     </header>
 
     <main>
-        <!-- Foto Profil -->
-        <img src="https://i.pinimg.com/736x/2b/cd/fb/2bcdfb2e5b922e5d87f3a66bfb26e123.jpg" 
-             alt="Foto Profil" class="foto-profil">
-
+        
         <!-- Biodata -->
         <h2>Reisya Aulia 💖</h2>
         <p><strong>Hobi:</strong> Tidur, makan, bercanda 🤭</p>
@@ -32,15 +29,61 @@
             </div>
         </div>
 
+        <!-- Jam Real-Time -->
+        <h3>⏰ Waktu sekarang: <span id="jam"></span></h3>
+
         <!-- Tombol Ganti Warna -->
         <button onclick="gantiWarna()">🎨 Ganti Warna Background</button>
+        
+        <!-- Tombol Mode Gelap -->
+        <button onclick="toggleMode()">🌙/☀️ Mode</button>
+
+        <!-- Emoji Random -->
+        <p id="emoji" style="font-size: 40px;">😊</p>
+        <button onclick="gantiEmoji()">🔄 Ganti Emoji</button>
+
+        <!-- Fun Fact Random -->
+        <p id="funfact">Klik tombol di bawah untuk fakta lucu!</p>
+        <button onclick="faktaLucu()">😂 Fakta Lucu</button>
     </main>
 
     <script>
+        // Jam Real-Time
+        setInterval(() => {
+            const now = new Date();
+            document.getElementById("jam").textContent = 
+                now.toLocaleTimeString();
+        }, 1000);
+
+        // Ganti Warna Background
         function gantiWarna() {
             const warna = ["#fef6f9", "#d4f1f4", "#fff4e6", "#f0e6ff"];
             document.body.style.backgroundColor = 
                 warna[Math.floor(Math.random() * warna.length)];
+        }
+
+        // Mode Gelap/Terang
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        // Emoji Random
+        function gantiEmoji() {
+            const emojis = ["😊","😂","😝","😍","🤩","😜","🥳","🤭"];
+            document.getElementById("emoji").textContent =
+                emojis[Math.floor(Math.random() * emojis.length)];
+        }
+
+        // Fakta Lucu Random
+        function faktaLucu() {
+            const facts = [
+                "Kamu lebih manis dari boba 🍯",
+                "Kalau ketawa bisa bikin orang lain ketularan 😆",
+                "Pernah nggak sengaja makan sambil nyanyi? 🎤",
+                "Kamu mirip karakter anime gemes 🥰"
+            ];
+            document.getElementById("funfact").textContent =
+                facts[Math.floor(Math.random() * facts.length)];
         }
     </script>
 </body>

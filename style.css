@@ -66,3 +66,17 @@ header {
     color: white;
     padding: 5px 0;
 }
+
+/* Mode Gelap */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode button {
+    background-color: #ffb6c1;
+}
+
+.dark-mode .progress {
+    background-color: #ffb6c1;
+}
